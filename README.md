@@ -9,13 +9,14 @@
 角色契約：透過 .antigravity/agent-contract.md 定義 AI 權限，防止代碼亂竄。
 
 🛠️ 快速開始 (Quick Start)
+
 1. 複製專案骨架
 請在你的終端機執行：
 
 Bash
 
 git clone https://github.com/basara123789/jake-antigravity-gitflow.git my-project
-## my-project可以改自己的專案名稱，記得之後的也都要改
+# my-project可以改自己的專案名稱，記得之後的也都要改
 cd my-project/main
 mkdir ../wt
 git checkout develop
@@ -53,3 +54,39 @@ wt/: 任務包廂（每個 AI Agent 的獨立辦公室）。
 Jake - AI 工作流架構師
 
 「讓 AI 成為你的工程師，而不是你的打字員。」
+
+📂 既有專案導入指南 (Migration Guide)
+如果想將現有的專案移入這套「AI 代理矩陣」中，請按照以下 SOP 操作：
+
+1. 建立標準物理結構
+首先，建立一個全新的工作空間目錄，並將原專案代碼放入 main/。
+
+Bash
+
+mkdir new-workspace && cd new-workspace
+mkdir wt
+# 將你的舊專案代碼移入 main/
+mv /path/to/old-project ./main
+
+2. 分支與 Worktree 初始化
+確保 Git 環境符合 Gitflow 規範並掛載實體目錄。
+
+Bash
+
+cd main
+git checkout -b develop          # 建立開發主線
+git push -u origin main develop  # 同步至 GitHub
+git worktree add ../develop develop
+
+3. 植入 AI 靈魂與工具
+從本模板中拷貝核心組件至新專案。
+
+將 .antigravity/ 資料夾拷貝至 new-workspace/main/。
+
+將 scripts/ 資料夾拷貝至 new-workspace/main/。
+
+4. 啟動 Antigravity 接管
+在 Antigravity 中開啟 new-workspace 總目錄，並對 AI 下達接管指令：
+
+「這是一個既有專案，我已按照矩陣模板重整目錄。請讀取 .antigravity/agent-contract.md，分析 main/ 代碼結構，並準備好在 ../wt/ 下執行新任務。」
+
