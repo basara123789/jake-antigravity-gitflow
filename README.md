@@ -25,25 +25,24 @@ cd my-project/main
 mkdir ../wt
 git checkout develop
 git checkout main
-git worktree add ../develop develop
+git worktree add ../develop develop 
+```
 
 ### 2. 啟動 Antigravity
 開啟 Antigravity 軟體，選擇 my-project 總目錄。
 
-# 輸入啟動咒語：
-
-「請讀取 .antigravity/agent-contract.md。從現在起，你是我這套流程的 AI 代理人，請遵守 Worktree 規範並準備接受指令。」
+輸入啟動咒語： 「請讀取 .antigravity/agent-contract.md。從現在起，你是我這套流程的 AI 代理人，請遵守 Worktree 規範並準備接受指令。」
 
 🎮 實戰指令範例
 🔹 情境 A：開發新功能 (Feature)
 指令： 「我需要開發一個登入頁面，請執行 scripts/flow.sh 建立 feature/login 任務，並在該空間完成實作。」
 
-AI 行為： 自動開好 wt/login 資料夾，並在獨立空間寫 Code。
+AI 行為：自動開好 wt/login 資料夾，並在獨立空間寫 Code。
 
 🔹 情境 B：執行測試與 Review
 指令： 「請進入 develop/ 目錄，對 ../wt/login 提交的變更進行整合測試。」
 
-AI 行為： 扮演 Reviewer 角色，確保新功能不會破壞主線。
+AI 行為：扮演 Reviewer 角色，確保新功能不會破壞主線。
 
 📂 目錄結構說明
 main/：行政指揮中心（存放合約、腳本、發布版本）。
@@ -53,22 +52,23 @@ develop/：整合測試區（AI 的練兵場）。
 wt/：任務包廂（每個 AI Agent 的獨立辦公室）。
 
 ## 📦 既有專案導入指南 (Migration)
-建立結構：
 
-Bash
-
+1. 建立結構
 mkdir new-workspace && cd new-workspace
 mkdir wt
 mv /path/to/old-project ./main
-初始化 Gitflow：
 
+2. 初始化 Gitflow
 Bash
 
 cd main
 git checkout -b develop
 git push -u origin main develop
 git worktree add ../develop develop
-植入靈魂： 將本模板的 .antigravity/ 與 scripts/ 複製到 new-workspace/main/。
+
+3. 植入靈魂
+
+將本模板的 .antigravity/ 與 scripts/ 複製到 new-workspace/main/ 即可完成。
 
 👨‍💻 作者
 Jake - AI 工作流架構師
