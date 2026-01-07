@@ -21,6 +21,7 @@ mkdir ../wt
 git checkout develop
 git checkout main
 git worktree add ../develop develop
+
 2. 啟動 Antigravity
 開啟 Antigravity 軟體，選擇 my-project 總目錄。
 
