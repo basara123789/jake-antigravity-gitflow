@@ -50,11 +50,6 @@ develop/: 整合測試區（AI 的練兵場）。
 
 wt/: 任務包廂（每個 AI Agent 的獨立辦公室）。
 
-👨‍💻 作者
-Jake - AI 工作流架構師
-
-「讓 AI 成為你的工程師，而不是你的打字員。」
-
 📂 既有專案導入指南 (Migration Guide)
 如果想將現有的專案移入這套「AI 代理矩陣」中，請按照以下 SOP 操作：
 
@@ -90,3 +85,7 @@ git worktree add ../develop develop
 
 「這是一個既有專案，我已按照矩陣模板重整目錄。請讀取 .antigravity/agent-contract.md，分析 main/ 代碼結構，並準備好在 ../wt/ 下執行新任務。」
 
+👨‍💻 作者
+Jake - AI 工作流架構師
+
+「讓 AI 成為你的工程師，而不是你的打字員。」
