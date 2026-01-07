@@ -88,4 +88,4 @@ git worktree add ../develop develop
 👨‍💻 作者
 Jake - AI 工作流架構師
 
-「讓 AI 成為你的工程師，而不是你的打字員。」
+# 「讓 AI 成為你的工程師，而不是你的打字員。」
