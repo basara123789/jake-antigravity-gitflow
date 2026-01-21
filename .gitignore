@@ -1,0 +1,6 @@
+# 忽略 Worktree 連結
+../wt/
+../develop/
+# 忽略系統雜物
+.DS_Store
+node_modules/

@@ -31,7 +31,7 @@ git worktree add ../develop develop
 ### 2. 啟動 Antigravity
 開啟 Antigravity 軟體，選擇 my-project 總目錄。
 
-輸入啟動咒語： 「請讀取 .antigravity/agent-contract.md。從現在起，你是我這套流程的 AI 代理人，請遵守 Worktree 規範並準備接受指令。」
+輸入啟動咒語： 「請讀取 .antigravity/agent-contract.md。從現在起，你是我這套流程的 AI 代理人，請遵守 Worktree 規範並準備接受指令。並且在執行所有任務時，必須先進行 RaR (Rephrase and Respond)，並在產出任何解決方案前，透過 CoT (Chain of Thought) 展示你一步步分析技術限制與因果關係的過程。」
 
 🎮 實戰指令範例
 
