@@ -4,8 +4,8 @@ NAME=$2
 
 case $COMMAND in
   "feature")
-    git worktree add -b "feature/$NAME" "../wt/$NAME" develop
-    echo "✅ Worktree Created: ../wt/$NAME"
+    git worktree add -b "feature/$NAME" "wt/$NAME" develop
+    echo "✅ Worktree Created: wt/$NAME"
     echo "🚀 Agent is ready to work on branch feature/$NAME"
     ;;
   "clean")
