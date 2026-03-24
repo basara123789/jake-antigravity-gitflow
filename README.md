@@ -42,6 +42,7 @@ bash scripts/setup.sh
 ```bash
 bash scripts/init-matrix.sh
 ```
+> 💡 **提醒**：執行 `init-matrix.sh` 前，請確保專案已進行過至少一次 Git commit（例如完成初始化），否則 Worktree 可能會因找不到 HEAD 而建立失敗。
 
 ---
 
