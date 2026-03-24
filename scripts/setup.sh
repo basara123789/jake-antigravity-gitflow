@@ -16,17 +16,17 @@ else
     echo "✅ 技能庫目錄已存在。"
 fi
 
-if [ -L "$GLOBAL_SKILLS_PATH/awesome" ] || [ -d "$GLOBAL_SKILLS_PATH/awesome" ]; then
-    rm -rf "$GLOBAL_SKILLS_PATH/awesome"
+if [ -L "$GLOBAL_SKILLS_PATH/awesome-skills" ] || [ -d "$GLOBAL_SKILLS_PATH/awesome-skills" ]; then
+    rm -rf "$GLOBAL_SKILLS_PATH/awesome-skills"
 fi
 
 echo "🔗 正在建立全域技能連結..."
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
     TARGET_PATH=$(cygpath -w "$LOCAL_SKILLS_DIR/skills")
-    LINK_PATH=$(cygpath -w "$GLOBAL_SKILLS_PATH/awesome")
+    LINK_PATH=$(cygpath -w "$GLOBAL_SKILLS_PATH/awesome-skills")
     powershell.exe -Command "New-Item -ItemType Junction -Path '$LINK_PATH' -Target '$TARGET_PATH'"
 else
-    ln -s "$LOCAL_SKILLS_DIR/skills" "$GLOBAL_SKILLS_PATH/awesome"
+    ln -s "$LOCAL_SKILLS_DIR/skills" "$GLOBAL_SKILLS_PATH/awesome-skills"
 fi
 
 if [ $? -eq 0 ]; then

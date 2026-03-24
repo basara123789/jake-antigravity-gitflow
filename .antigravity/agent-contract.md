@@ -1,9 +1,10 @@
-# 🤖 Antigravity AI 代理協作協議 v1.0
+# 🤖 Antigravity AI 代理協作協議 v2.1
 
 ## 1. 核心開發規範 (Gitflow)
 - **根目錄 (Main)**: 穩定分支。僅允許執行 `git merge` 與 `git tag`。
 - **develop 目錄**: 這是你的整合區。所有功能完成後，必須在此運行全域測試。
 - **wt/ 目錄**: 這是你的戰場。每個新任務必須建立一個 `wt/feature-<name>` 子目錄。
+- **BDD 優先**: 在開始實施功能前，必須確認該目錄或根目錄有 `SPEC.feature` 的規格說明，AI 必須严格遵循規格。
 
 ## 2. 角色權限定義
 ### 【功能開發員 (Feature Agent)】
@@ -17,7 +18,7 @@
 
 ## 3. 工作流自動化指令 (Command Shortcuts)
 當接收到任務時，請優先調用以下邏輯：
-- `Start Feature`: `git worktree add -b feature/<name> wt/<name> develop`
+- `Start Feature`: `git worktree add -b feature/<name> wt/feature-<name> develop`
 - `Sync Work`: `git pull origin develop` (在執行任務前必做)
 - `Pre-flight Check`: 在 commit 前必須執行 `npm test` 或相關驗證工具。
 
